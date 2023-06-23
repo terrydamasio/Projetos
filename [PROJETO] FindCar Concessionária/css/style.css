@@ -1,0 +1,322 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Barra de navegação */ 
+.navbar-light .navbar-nav .nav-link {
+    color: black;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    transition: 0.6s;
+    color: #dc3545;
+}
+
+/* Choose us */
+.h2-choose {
+    text-align: center;
+}
+
+.box-hover:hover {
+    transition: 0.6s;
+    box-shadow: 8px 8px 20px 1px rgb(0,0,0, 0.2);
+}
+
+.home {
+    margin-top: 60px;
+}
+
+/* Testemonials */
+.section-testemonial h2 {
+    
+    text-align: center;
+    font-size: 3em;
+    font-weight: bold;
+    position: relative;
+    margin: 30px 0 60px;
+}
+
+.section-testemonial h2::after {
+    content: "";
+    width: 140px;
+    position: absolute;
+    margin:0 auto;
+    height: 3px;
+    background-color: #dc3545;
+    left: 0;
+    right: 0;
+    bottom: -10px;
+    opacity: .8;
+}
+
+.col-center {
+    margin: 0 auto;
+    float: none!important;
+}
+
+.carousel {
+    margin: 50px auto;
+    padding-inline-start: 0 70px;
+}
+
+.carousel-item {
+    color: #999;
+    font-size: 14px;
+    text-align: 14px;
+    overflow: hidden;
+    min-height: 290px;
+}
+
+.carousel .item .img-box { 
+    width: 135px;
+    height: 135px;
+    margin: 0 auto;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+}
+
+.carousel .img-box img {
+width: 100%;
+height: 100%;
+display: block;
+border-radius: 50%;
+}
+
+.carousel .testemonial {
+padding: 30px 0 10px;
+}
+
+.carousel .overview {
+font-style: italic;
+}
+
+.carousel .overview b {
+text-transform: uppercase;
+color: #dc3545;
+}
+
+.carousel .carousel-control {
+width: 40px; 
+height: 30px;
+margin-top: -20px;
+top: 50%;
+background: none;
+}
+
+.carousel-control i {
+font-size: 30px;
+line-height: 42px;
+position: absolute;
+display: inline-block;
+color: rgba(0, 0, 0, 0.8);
+text-shadow: 0 3px 3px #e6e6e6, 0 0 0 #000;
+}
+
+.carousel .carousel-indicators {
+bottom: -40px;
+}
+
+.carousel-indicators li, .carousel-indicators li.active {
+width: 10px;
+height: 10px;
+margin: 1px 3px;
+border-radius: 50%;
+}
+
+.carousel-indicators li {
+background: #999;
+border-color: transparent;
+box-shadow: inset 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-indicators li.active {
+background: #555;
+box-shadow: inset 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Formulário */
+
+.container.section {
+    width: 700px;
+    margin-top: 90px;
+    margin-bottom: 90px;
+    background: linear-gradient(to bottom right, rgb(206, 0, 0), rgb(207, 64, 64),rgb(233, 138, 138));
+    border-radius: 10px;
+}
+
+legend.contato {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.formulario {
+    margin: 10px auto;
+    margin-bottom: 10px;
+    padding: 50px;
+}
+
+.btn.btn-enviar {
+    font-weight: bold;
+    color: white;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.btn.btn-enviar:hover {
+    font-weight: bold;
+    transition: 0.6s;
+    color: #000;
+    background: white;
+    border: 1px solid #343a40;
+    border-radius: 5px;
+}
+
+/* Rodapé */
+.rodape {
+    height: 80px;
+    border-top: 1px solid #999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* Responsividade */
+@media (max-width: 575.98px) {
+    .car-home {
+        width: 0px;
+    } 
+
+    .car-services {
+        width: 400px;
+    }
+
+    h1.passo {
+        font-size: 3em;
+    }
+
+    h2.conosco,
+    h2.melhores,
+    h2.dizem {
+        font-size: 2em;
+    }
+
+    .btn-entrar,
+    .btn-cadastrar {
+        margin-bottom: 10px;
+    }
+
+    .container.section {
+        width: 400px;
+        margin: 0 auto;
+    }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) { 
+    
+    .car-home {
+        width: 0px;
+    }
+    .car-services {
+        width: 500px;
+    }
+
+    h1.passo {
+        font-size: 3em;
+    }
+
+    h2.conosco,
+    h2.melhores,
+    h2.dizem {
+        font-size: 2.5em;
+    }
+
+    .btn-entrar,
+    .btn-cadastrar {
+        margin-bottom: 10px;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .car-home {
+        width: 420px;
+    }
+
+    .car-services {
+        width: 380px;
+    }
+    h1.passo {
+        font-size: 3em;
+    }
+
+    h2.conosco,
+    h2.melhores,
+    h2.dizem {
+        font-size: 2.5em;
+    }
+
+    .btn-entrar,
+    .btn-cadastrar {
+        margin-left: 10px;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {  
+    .car-home {
+        width: 548px;
+    }
+
+    .car-services {
+        width:  500px;
+    }
+    h1.passo {
+        font-size: 3em;
+    }
+
+    h2.conosco,
+    h2.melhores,
+    h2.dizem
+    h2.section-testemonial {
+        font-size: 2.8em;
+    }
+
+    .btn-entrar,
+    .btn-cadastrar {
+        margin-left: 10px;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+    .car-home {
+        width: 670px;
+    }
+
+    .car-services {
+        width: 630px;
+    }
+
+    h1.passo {
+        font-size: 3.5em;
+    }
+
+    h2.conosco,
+    h2.melhores,
+    h2.dizem {
+        font-size: 3em;
+    }
+
+    .btn-entrar,
+    .btn-cadastrar {
+        margin-left: 10px;
+    }
+}

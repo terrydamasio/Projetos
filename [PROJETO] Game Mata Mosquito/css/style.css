@@ -1,0 +1,67 @@
+/* Tamanhos das moscas */
+.mosca1 {
+    height: 50px;
+    width: 50px;
+}
+
+.mosca2 {
+    height: 70px;
+    width: 70px;
+}
+
+.mosca3 {
+    height: 90px;
+    width: 90px;
+}
+
+/* Ajustando orientação das moscas */
+.ladoA {
+    transform: scaleX(1);
+}
+
+.ladoB {
+    transform: scaleX(-1);
+}
+
+/* Painel */
+.painel {
+    border-radius: 10px;
+    position: absolute;
+    width: 230px;
+    height: 130px;
+    padding: 19px;
+    left: 0px;
+    bottom: 0px;
+    border-top: 1px solid #fff;
+    background-color: #fff;
+    opacity: 0.7;
+}
+
+.vidas {
+    float: left;
+}
+
+.cronometro {
+    float: left;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Botão Play */
+.botao_reiniciar{
+    height: 36px;
+    padding: 5px;
+    position: relative;
+    display: flex;
+    top: 743px;
+    left: 20px;
+}
+
+.botao_inicial{
+    height: 36px;
+    padding: 5px;
+    position: relative;
+    display: flex;
+    top: 707px;
+    left: 105px;
+}
