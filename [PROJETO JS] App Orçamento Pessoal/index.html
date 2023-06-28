@@ -57,7 +57,7 @@
                 </select>
             </div>
   
-            <div class="col-md-2 mb-2">
+            <div class="col-md-2 mb-2" >
                 <select class="form-control" id="mes">
                     <option value="">Mês</option>
                     <option value="1">Janeiro</option>
@@ -113,15 +113,15 @@
     <div class="modal fade" id="modalRegistraDespesa" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
-                <div class="modal-header text-success">
-                    <h5 class="modal-title" id="exampleModalLabel">Registro inserido com sucesso</h5>
+                <div id="modalTituloDiv">
+                    <h5 class="modal-title" id="modalTitulo"></h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <div class="modal-body">Despesa foi cadastrada com sucesso!</div>
+                <div class="modal-body" id="modalConteudo"></div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-success" data-dismiss="modal">Voltar</button>
+                    <button type="button" class="" data-dismiss="modal" id="modalBtn">Voltar</button>
                 </div>
             </div>
         </div>
