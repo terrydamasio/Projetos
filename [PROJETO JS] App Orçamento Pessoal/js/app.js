@@ -44,9 +44,6 @@ class Bd {
         //array de despesas
         let despesas = Array()
 
-
-
-
         let id = localStorage.getItem('id')
 
         //recuperar todas as despesas cadastradas em localStorage
@@ -65,6 +62,10 @@ class Bd {
             despesas.push(despesa)
         }
         return despesas
+    }
+
+    pesquisar(despesa) {
+        console.log(despesa)
     }
 }
 
@@ -173,4 +174,17 @@ function carregaListaDespesas() {
         linha.insertCell(3).innerHTML = d.valor
     
     })
+}
+
+function pesquisarDespesa() {
+    let ano = document.getElementById('ano')
+    let mes = document.getElementById('mes')
+    let dia = document.getElementById('dia')
+    let tipo = document.getElementById('tipo')
+    let descricao = document.getElementById('descricao')
+    let valor = document.getElementById('valor')
+
+    let despesa = new Despesa(ano, mes, dia, tipo, descricao, valor)
+    
+    bd.pesquisar(despesa)
 }
