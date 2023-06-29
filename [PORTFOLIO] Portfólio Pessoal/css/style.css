@@ -220,6 +220,7 @@ main nav .menu {
     padding-left: 60px;
     transform: translateX(-100%);
     transition: transform .3s .1s;
+    z-index: 1000;
 }
 
 main nav .menu.show {
