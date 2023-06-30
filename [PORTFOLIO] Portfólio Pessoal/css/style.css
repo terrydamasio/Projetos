@@ -11,6 +11,17 @@
     --light-color: #f1f2f6;
     --dark-color: #2f3542;
     --dark-04-color: #2f354266;
+
+    --csspercent: 95;
+    --bspercent: 95;
+    --jspercent: 80;
+    --wppercent: 80;
+
+    --csscolor: #00a0e4;
+    --bscolor: #6610f2;
+    --jscolor: #F7971E;
+    --wpcolor: #61DBFB;
+
 }
 
 * {
@@ -357,6 +368,7 @@ main > div .head {
 }
 
 main > div .head h2 {
+    text-align: center;
     font-size: clamp(36px, 4.5vw, 3em);
 }
 
@@ -396,7 +408,7 @@ main .wrapper .head p {
 .service ul li:hover {
     background-color: var(--primary-color);
     color: var(--white-color);
-    box-shadow: rgb(0 0 0 / 30% 0 30px 60px -10px);
+    box-shadow: rgb(0 0 0 / 30%) 0 30px 60px -10px;
 }
 
 .service ul li i {
@@ -413,7 +425,7 @@ main .wrapper .head p {
     background-color: var(--dark-color);
     color: var(--primary-color);
     border-radius: 50%;
-    box-shadow: 0 0 0 5px var(--dark-04-color) 
+    box-shadow: 0 0 0 5px var(--dark-04-color), 
                 0 0 0 15px var(--light-color);
 }
 
@@ -432,13 +444,142 @@ main .wrapper .head p {
     color: var(--dark-color);
 }
 
+/* -----------
+    3. Skills 
+   ----------- */
+.skills ul {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    max-width: 750px;
+    margin: 0 auto;
+}
 
+.skills li,
+span {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
 
+.skills li :where(.circle, svg) {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    z-index: 10;
+}
 
+.skills li svg circle {
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke-width: 4;
+    stroke-linecap: round;
+    transform: translate(5px, 5px);
+    stroke-dasharray: 440;
+}
 
+.skills li svg {
+    transform: rotate(270deg);
+}
 
+.skills li.css svg circle {
+    stroke-dashoffset: calc(440 - (440 * var(--csspercent)) / 100);
+}
+.skills li.bs svg circle {
+    stroke-dashoffset: calc(440 - (440 * var(--bspercent)) / 100);
+}
+.skills li.js svg circle {
+    stroke-dashoffset: calc(440 - (440 * var(--jspercent)) / 100);
+}
+.skills li.wp svg circle {
+    stroke-dashoffset: calc(440 - (440 * var(--wppercent)) / 100);
+}
 
+.skills li .circle .inside {
+    position: absolute;
+    width: calc(100% - 40px);
+    height: calc(100% - 40px);
+    top: 20px;
+    left: 20px;
+    background-color: var(--light-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+.skills li .circle .inside::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid var(--light-color);
+    border-radius: 50%;
+    transform: scale(1.28);
+    z-index: -1;
+}
+
+.skills li .circle .inside span {
+    font-size: 24px;
+    color: var(--grey-color);
+}
+
+.skills li .circle .dot {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+} 
+
+.skills li .circle .dot::before {
+    content: '';
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    top: -3px;
+    left: 50%;
+    transform: translateX(-50%);
+} 
+
+.skills li.css .circle .dot {
+    transform: rotate(calc(3.6deg * var(--csspercent)));
+}
+.skills li.bs .circle .dot {
+    transform: rotate(calc(3.6deg * var(--bspercent)));
+}
+.skills li.js .circle .dot {
+    transform: rotate(calc(3.6deg * var(--jspercent)));
+}
+.skills li.wp .circle .dot {
+    transform: rotate(calc(3.6deg * var(--wppercent)));
+}
+
+.skills li.css .circle .dot::before {
+    background-color: var(--csscolor);
+    box-shadow: 0 0 10px var(--csscolor);
+}
+.skills li.bs .circle .dot::before {
+    background-color: var(--bscolor);
+    box-shadow: 0 0 10px var(--bscolor);
+}
+.skills li.js .circle .dot::before {
+    background-color: var(--jscolor);
+    box-shadow: 0 0 10px var(--jscolor);
+}
+.skills li.wp .circle .dot::before {
+    background-color: var(--wpcolor);
+    box-shadow: 0 0 10px var(--wpcolor);
+}
+
+.skills li h4 {
+    font-weight: 600;
+    color: var(--grey-color);
+
+}
 
 
 
