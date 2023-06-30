@@ -56,3 +56,4 @@ const animation = document.querySelectorAll('.animate');
 animation.forEach((el) => {
     io. observe(el);
 }) 
+

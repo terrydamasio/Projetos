@@ -20,7 +20,7 @@
     --csscolor: #00a0e4;
     --bscolor: #6610f2;
     --jscolor: #F7971E;
-    --wpcolor: #61DBFB;
+    --wpcolor: #21759b;
 
 }
 
@@ -39,6 +39,10 @@
 
 *,::before,::after {
     box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -871,6 +875,16 @@ footer {
     transition-delay: .9s;
 }
 
+
+/* Small devices (landscape phones, 576px and up)*/
+@media screen and (max-width: 767.98px) { 
+    .container {
+        padding: 0 34px;
+    }
+
+}
+
+/* Medium devices (tablets, 768px and up)*/
 @media screen and (min-width: 768px) {
     header {
         width: 80px;
