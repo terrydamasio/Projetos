@@ -24,6 +24,14 @@
 
 }
 
+[data-theme = "dark"] {
+    --white-color: #101216;
+    --grey-color: #747d8c;
+    --light-color: #202128;
+    --dark-color: #f2f3f6;
+    --dark-04-color: #f2f3f666;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -60,7 +68,7 @@ ul {
     list-style: none;
 }
 
-h1,h2,h3,h4 {
+h1, h2, h3, h4 {
     font-weight: 800;
     line-height: normal;
 }
@@ -284,6 +292,7 @@ main nav .menu ul {
 }
 
 .hero .text-top h1 span {
+    float: left;
     font-size: 32px;
     font-weight: 600;
 }
@@ -355,7 +364,7 @@ main nav .menu ul {
     2. My Service
    ----------------- */
 .service {
-    background-color: var(--light-color);
+    background-color: var(--white-color);
 }
 
 main > div:not(.hero) {
@@ -373,6 +382,10 @@ main > div .head h2 {
 }
 
 main > .wrapper.center{
+    text-align: center;
+}
+
+main > div .head p {
     text-align: center;
 }
 
@@ -400,7 +413,7 @@ main .wrapper .head p {
     position: relative;
     padding: 48px 32px 32px;
     margin-top: 32px;
-    background-color: var(--white-color);
+    background-color: var(--light-color);
     border-radius: 20px;
     transition: background-color .3s, color .3s, box-shadow .3s;
 }
@@ -479,7 +492,15 @@ span {
     stroke-dasharray: 440;
 }
 
-.skills li svg {
+.skills li .animate.this svg circle {
+    animation: fillline 2s linear forwards;
+}
+
+@keyframes fillline {
+    from {stroke-dashoffset: 440}
+}
+
+.skills li .circle svg {
     transform: rotate(270deg);
 }
 
@@ -525,6 +546,19 @@ span {
 .skills li .circle .inside span {
     font-size: 24px;
     color: var(--grey-color);
+    opacity: 0;
+    transform: scale(0.2) translateY(50px);
+}
+
+.skills li .animate.this .inside span {
+    animation: showup 1s 1s forwards;
+}
+
+@keyframes showup {
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
 }
 
 .skills li .circle .dot {
@@ -533,6 +567,17 @@ span {
     height: 100%;
     border-radius: 50%;
 } 
+
+.skills ul li .animate.this .inside .dot {
+    animation: dot 2s linear forwards;
+}
+
+@keyframes dot {
+    from {
+        transform: rotate(0);
+        opacity: 0;
+    }
+}
 
 .skills li .circle .dot::before {
     content: '';
@@ -581,7 +626,250 @@ span {
 
 }
 
+/* ----------------
+    4. Latest Work 
+   ---------------- */
+.latest-work ul {
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+}
 
+:where(.latest-work, .portfolio) ul li .thumbnail {
+    height: 200px;
+    border-radius: 20px;
+    overflow: hidden; 
+}
+
+:where(.latest-work, .portfolio)  ul li .thumbnail img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    transition: transform .3s;
+}
+
+.latest-work ul li:hover .thumbnail img {
+    transform: scale(1.1);
+}
+
+.latest-work ul li h3 {
+    font-weight: 600;
+    font-size: 16px;
+    margin: 16px 0 0 16px;
+    color: var(--grey-color);
+} 
+
+
+/* ----------------
+    5. Portfolio
+   ---------------- */
+.portfolio ul {
+    grid-template-columns: repeat(auto-fill, minmax(249px, 1fr));
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(249px, 1fr);
+    overflow-x: auto;
+}
+
+.portfolio ul li .thumbnail {
+    position: relative;
+    height: 300px;
+}
+
+.portfolio ul li .thumbnail img {
+    object-position: left;
+    transition: object-position 1s;
+}
+
+.portfolio ul li:hover .thumbnail img {
+    object-position: right;
+}  
+
+.portfolio ul li .thumbnail .link {
+    position: absolute;
+    top: 50%;
+    right: -13px;
+    width: 60px;
+    height: 60px;
+    padding: 10px;
+    background-color: var(--primary-color);
+    color: var(--pure-white);
+    transform: translate(100%, -50%);
+    display: flex;
+    align-items: center;
+    border-radius: 50%;
+    transition: transform .3s;
+}
+
+.portfolio ul li:hover .thumbnail .link {
+    transform: translate(0, -50%);
+    transition: transform .3s .3s;
+} 
+
+.portfolio ul li .thumbnail .link:hover {
+    box-shadow: 0 0 0 10px var(--primary-04-color);
+    animation: blinkprimary 1s infinite;
+}
+
+.portfolio ul li.has-hover {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(to right, var(--light-color), transparent);
+    border-radius: 20px;
+}
+
+.portfolio ul li.has-hover a {
+    font-size: 28px;
+    font-weight: 600;
+    margin-left: 32px;
+    z-index: 1;
+}
+
+.portfolio ul li.has-hover a::before {
+    width: 32px;
+    height: 32px;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* ---------------
+    7. Contact 
+   --------------- */
+.contact {
+    position: relative;
+    background: url('img/contact-bg.jpg') center no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+}
+
+.contact::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #2f3542;
+    opacity: .95;
+}
+
+.contact .wrapper {
+    position: relative;
+    max-width: 950px;
+    margin: auto;
+    display: grid;
+    gap: 46px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    color: var(--pure-white);
+}
+
+.contact form p {
+    margin-bottom: 24px;
+}
+
+.contact form label {
+    display: block;
+    color: var(--pure-white);
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.contact form :where(input, textarea) {
+    font-family: 'Inter';
+    font-size: 14px;
+    outline: 0;
+    padding: 16px;
+    color: var(--pure-white);
+    background-color: transparent;
+    border: 1px solid var(--grey-color);
+    border-radius: 25px;
+}
+
+.contact form input {
+    width: 75%;
+    height: 46px; 
+}
+
+.contact form :where(input, textarea):focus,
+.contact form :where(input, textarea):not(:placeholder-shown):not(:focus) {
+    border-color: var(--primary-04-color);
+}
+
+.contact form :where(input, textarea)::placeholder,
+.contact ul li p {
+    color: var(--grey-color);
+}
+
+.contact form textarea {
+    width: 100%;
+}
+
+.contact form button {
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+}
+
+.contact .text-right {
+    margin-top: 115px;
+}
+
+.contact ul li span {
+    align-items: start;
+    text-transform: uppercase;
+}
+
+/* ------------
+    8. Footer
+   ------------ */
+footer {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    padding-left: 32px;
+
+}
+
+/* ------------------------
+    9. Animation on Scroll
+   ------------------------ */
+.animate > * {
+    opacity: 0;
+    transition: opacity 1s .3s, transform .5s .3s;
+}
+
+.up.animate > * {
+    transform: translate(0, -50%);
+}
+.down.animate > * {
+    transform: translate(0, 50%);
+}
+.left.animate > * {
+    transform: translate(-50%, 0);
+}
+.right.animate > * {
+    transform: translate(50%, 0);
+}
+
+.animate.this > * {
+    transform: translate(0,0);
+    opacity: 1;
+}
+
+.animate.this > *:nth-child(1) {
+    transition-delay: .2s;
+}
+.animate.this > *:nth-child(2) {
+    transition-delay: .4s;
+}
+.animate.this > *:nth-child(3) {
+    transition-delay: .6s;
+}
+.animate.this > *:nth-child(4) {
+    transition-delay: .8s;
+}
+.animate.this > *:nth-child(5) {
+    transition-delay: .9s;
+}
 
 @media screen and (min-width: 768px) {
     header {
@@ -622,6 +910,12 @@ span {
         color: inherit;
         font-weight: 600;
     }
+
+    .portfolio ul {
+        grid-auto-flow: row;
+        grid-auto-columns: inherit;
+        overflow-x: unset;
+    }
 }
 
 @media screen and (min-width: 1200px) {
@@ -631,5 +925,9 @@ span {
 
     .hero .text > * {
         padding: 0;
+    }
+
+    .portfolio ul {
+        grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
     }
 }
