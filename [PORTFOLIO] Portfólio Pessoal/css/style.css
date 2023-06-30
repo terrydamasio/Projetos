@@ -5,12 +5,13 @@
 :root {
     --primary-color: #ff4757;
     --primary-04-color: #ff475766;
-    --white-color: #ffffff;
+    --white-color: #101216;
     --pure-white: #ffffff;
     --grey-color: #747d8c;
-    --light-color: #f1f2f6;
+    --light-color: #202128;
     --dark-color: #2f3542;
-    --dark-04-color: #2f354266;
+    --dark-color: #f2f3f6;
+    --dark-04-color: #f2f3f666;
 
     --csspercent: 95;
     --bspercent: 95;
@@ -25,11 +26,11 @@
 }
 
 [data-theme = "dark"] {
-    --white-color: #101216;
+    --white-color: #ffffff;
     --grey-color: #747d8c;
-    --light-color: #202128;
-    --dark-color: #f2f3f6;
-    --dark-04-color: #f2f3f666;
+    --light-color: #f1f2f6;
+    --dark-color: #2f3542;
+    --dark-04-color: #2f354266;
 }
 
 * {
@@ -194,8 +195,8 @@ main nav .daynight input {
 
 main nav .daynight label { 
     display: flex;
-    background-color: var(--dark-color);
-    color: var(--white-color);
+    background-color: var(--white-color);
+    color: var(--dark-color);
     box-shadow: 0 0 0 4px var(--dark-04-color);
     cursor: pointer;
 }
