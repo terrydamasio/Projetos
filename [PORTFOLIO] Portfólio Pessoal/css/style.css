@@ -195,8 +195,8 @@ main nav .daynight input {
 
 main nav .daynight label { 
     display: flex;
-    background-color: var(--white-color);
-    color: var(--dark-color);
+    background-color: var(--dark-color);
+    color: var(--white-color);
     box-shadow: 0 0 0 4px var(--dark-04-color);
     cursor: pointer;
 }
@@ -224,12 +224,12 @@ main nav :is(.menu-trigger, .daynight label):hover {
     50% {box-shadow: 0 0 0 0 var(--dark-04-color);}       
 }
 
-main nav .daynight label .light,
-main nav .daynight input:checked ~ label .dark {
+main nav .daynight label .dark,
+main nav .daynight input:checked ~ label .light {
     display: none;
 }
 
-main nav .daynight input:checked ~ label .light {
+main nav .daynight input:checked ~ label .dark {
     display: block;
 }
 
