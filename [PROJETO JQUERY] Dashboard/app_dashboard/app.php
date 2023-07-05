@@ -93,7 +93,7 @@ $competencia = explode('-', $_GET['competencia']);
 $ano = $competencia[0];
 $mes = $competencia[1];
 
-$dias_do_mes = cal_days_in_month()
+$dias_do_mes = cal_days_in_month()//PAREI AQUI 20 min
 
 $dashboard->__set('data_inicio', '2018-10-01');
 $dashboard->__set('data_fim', '2018-10-31');
