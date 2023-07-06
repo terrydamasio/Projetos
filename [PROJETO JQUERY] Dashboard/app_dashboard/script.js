@@ -14,7 +14,6 @@ $(document).ready(() => {
         })
     })
 
-
     //ajax
     $('#competencia').on('change', e => {
 
@@ -23,9 +22,19 @@ $(document).ready(() => {
         $.ajax({
             type: 'GET', 
             url: 'app.php',
-            data: `competencia=${competencia}`, 
-            success: dados => {console.log(dados)}, 
-            error: erro => {console.log(erro)}
+            data: `competencia=${competencia}`, //x-www-form-urlencoded
+            dataType: 'json', 
+            success: function(dados) {
+                $('#numeroVendas').html(dados.numeroVendas)
+                $('#totalVendas').html(dados.totalVendas)
+                $('#clientesAtivos').html(dados.clientesAtivos)
+                $('#clientesInativos').html(dados.clientesInativos)
+                $('#totalReclamacoes').html(dados.totalReclamacoes)
+                $('#totalElogios').html(dados.totalElogios)
+                $('#totalSugestoes').html(dados.totalSugestoes)
+                $('#despesas').html(dados.despesas)
+            }, 
+            error: erro => { console.log(erro) }
         })
 
         //método, url, dados, sucesso, erro
