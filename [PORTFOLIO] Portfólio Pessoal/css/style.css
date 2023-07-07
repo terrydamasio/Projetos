@@ -318,7 +318,20 @@ main nav .menu ul {
     bottom: 25%;
     z-index: -1;
     transform: translateX(50%);
+    animation: balanco 1s ease-in-out infinite;
 }
+
+@keyframes balanco {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
 
 .hero .wrapper .image img {
     width: 610px;
