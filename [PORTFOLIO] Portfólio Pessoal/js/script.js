@@ -57,3 +57,9 @@ animation.forEach((el) => {
     io. observe(el);
 }) 
 
+//animação da nav no scroll
+
+window.addEventListener('scroll', function() {
+    let animacao = document.querySelector('.fixo-topo');
+    animacao.classList.toggle('ativo', window.scrollY > 100)
+})

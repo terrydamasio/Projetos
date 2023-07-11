@@ -219,17 +219,16 @@ main nav :where(.container, ul) {
 main .fixo-topo {
     position: fixed;
     top: 0;
-    background-color: #101216;
+    background-color: transparent;
     z-index: 1;
+    transition: 1s;
 }
 
-main .daynight {
-    position: fixed;
-
-    right: 50px;
-    background-color: #101216;
-    z-index: 1;
+main .fixo-topo.ativo {
+    background-color: var(--white-color);
+    height: 70px;
 }
+
 
 main nav .menu a {
     font-weight: 800;
@@ -245,8 +244,8 @@ main nav .menu a:hover {
 }
 
 main nav .daynight input {
-     position: absolute;
-     height: 0;
+    position: absolute;
+    height: 0;
 }
 
 main nav .daynight label { 
