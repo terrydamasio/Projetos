@@ -216,6 +216,21 @@ main nav :where(.container, ul) {
     height: inherit;
 }
 
+main .fixo-topo {
+    position: fixed;
+    top: 0;
+    background-color: #101216;
+    z-index: 1;
+}
+
+main .daynight {
+    position: fixed;
+
+    right: 50px;
+    background-color: #101216;
+    z-index: 1;
+}
+
 main nav .menu a {
     font-weight: 800;
     display: flex;
@@ -258,7 +273,7 @@ main nav :is(.menu-trigger, .daynight label):hover {
     background-color: var(--primary-color);
     color: var(--white-color);
     box-shadow: 0 0 0 4px var(--primary-04-color);
-    animation: blinkdark 1s infinite; 
+    animation: blinkdark 1s infinite;
 }
 
 @keyframes blinkdark {
@@ -296,7 +311,6 @@ main nav .menu ul {
     flex-direction: column;
     justify-content: center;
     gap: 30px;
-
 }
 
 /* ------------
