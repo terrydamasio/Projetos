@@ -217,18 +217,19 @@ main nav :where(.container, ul) {
 }
 
 main .fixo-topo {
-    position: fixed;
+    position: -webkit-sticky;
+    position: sticky;
     top: 0;
     background-color: transparent;
     z-index: 1;
-    transition: 1s;
+    background: var(--white-color);
+    transition: 0.5s;
 }
 
 main .fixo-topo.ativo {
-    background-color: var(--white-color);
     height: 70px;
+    transition: 0.5s;
 }
-
 
 main nav .menu a {
     font-weight: 800;
@@ -237,6 +238,12 @@ main nav .menu a {
     justify-content: center;
     color: var(--white-color);
     transition: color .3s;
+}
+
+main nav .menu {
+    display: flex;
+    align-items: center;
+    justify-content: start;
 }
 
 main nav .menu a:hover {
@@ -1161,6 +1168,7 @@ footer {
     .hero .text-top p br {
         display: none;
     }
+
 }
 
 /* Medium devices (tablets, 768px and up)*/
