@@ -29,8 +29,8 @@
         <div id="inicio" class="wrapper">
             <main>
                 <!-- Início Navbar -->
-                <nav class="fixo-topo">
-                    <div class="container">
+                <nav>
+                    <div class="container fixo-topo">
                         <div class="menu has-hover">
                             <ul class="phone">
                                 <li><a href="#inicio">Início</a></li>
@@ -268,7 +268,7 @@
                         <div class="wrapper center left animate">
                             <div class="head">
                                 <h2>Portfólio</h2>
-                                <p></p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem impedit optio a expedita sit? Error dolorem odio, natus, repudiandae in fugiat fuga velit eveniet alias quaerat similique quasi, delectus voluptas.</p>
                             </div>
                             <ul>
                                 <li>
@@ -278,8 +278,6 @@
                                         </a>
                                         <a href="#0" class="link"><i class="ri-arrow-right-line ri-2x"></i></a>
                                     </div>
-                                    <h3>Projeto de</h3>
-                                    <p>Lorem ipsum dolor sit amet consectetur.</p>                                                                                                                                                                     
                                 </li>
                                 <li>
                                     <div class="thumbnail">
@@ -288,8 +286,6 @@
                                         </a>
                                         <a href="#0" class="link"><i class="ri-arrow-right-line ri-2x"></i></a>
                                     </div>
-                                    <h3>Projeto de</h3>
-                                    <p>Lorem ipsum dolor sit amet consectetur.</p>   
                                 </li>
                                 <li>
                                     <div class="thumbnail">
@@ -298,8 +294,6 @@
                                         </a>
                                         <a href="#0" class="link"><i class="ri-arrow-right-line ri-2x"></i></a>
                                     </div>
-                                    <h3>Projeto de</h3>
-                                    <p>Lorem ipsum dolor sit amet consectetur.</p>   
                                 </li>
                                 <li>
                                     <div class="thumbnail">
@@ -308,8 +302,6 @@
                                         </a>
                                         <a href="#0" class="link"><i class="ri-arrow-right-line ri-2x"></i></a>
                                     </div>
-                                    <h3>Projeto de</h3>
-                                    <p>Lorem ipsum dolor sit amet consectetur.</p>   
                                 </li>
                                 <li>
                                     <div class="thumbnail">
@@ -318,8 +310,6 @@
                                         </a>
                                         <a href="#0" class="link"><i class="ri-arrow-right-line ri-2x"></i></a>
                                     </div>
-                                    <h3>Projeto de</h3>
-                                    <p>Lorem ipsum dolor sit amet consectetur.</p>   
                                 </li>
                                 <li>
                                     <div class="thumbnail">
@@ -328,8 +318,6 @@
                                         </a>
                                         <a href="#0" class="link"><i class="ri-arrow-right-line ri-2x"></i></a>
                                     </div>
-                                    <h3>Projeto de</h3>
-                                    <p>Lorem ipsum dolor sit amet consectetur.</p>   
                                 </li>
                                 <li class="has-hover"><a href="#0">Ver mais</a></li>
                             </ul>
@@ -342,28 +330,28 @@
                 <div id="contato" class="contact">
                     <div class="container">
                         <div class="wrapper">
-                            <form action="" class="left animate">
+                            <form method="post" action="mensagem_contato.php" class="left animate">
                                 <div class="head">
                                     <h2>Entre em Contato</h2>
                                 </div>
                                 <p>
                                     <label>Seu Nome</label>
-                                    <input type="text" placeholder="John Doe">
+                                    <input name="nome" type="text" placeholder="John Doe">
                                 </p>
                                 <p>
                                     <label>Seu Email</label>
-                                    <input type="email" placeholder="e.g john@gmail.com">
+                                    <input name="email" type="email" placeholder="e.g john@gmail.com">
                                 </p>
                                 <p>
                                     <label>Tópico</label>
-                                    <input type="text" placeholder="Qual o tópico para se descutir?">
+                                    <input name="topico" type="text" placeholder="Qual o tópico para se descutir?">
                                 </p>
                                 <p>
                                     <label>Mensagem</label>
-                                    <textarea cols="30" rows="10" placeholder="Escreva sua mensagem aqui."></textarea>
+                                    <textarea name="mensagem" cols="30" rows="10" placeholder="Escreva sua mensagem aqui."></textarea>
                                 </p>
                                 <p>
-                                    <button class="button">Enviar</button>
+                                    <button type="submit" class="button">Enviar</button>
                                 </p>
                             </form>
                             <div class="text-right">
