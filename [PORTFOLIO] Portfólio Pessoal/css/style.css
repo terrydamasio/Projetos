@@ -810,6 +810,19 @@ span {
     transform: translateX(-50%);
 }
 
+.portfolio ul li h3 {
+    font-weight: 600;
+    font-size: 20px;
+    margin: 16px 0 0 16px;
+    color: var(--grey-color);
+} 
+.portfolio ul li p {
+    font-weight: 600;
+    font-size: 16px;
+    margin: 16px 0 0 16px;
+    color: var(--grey-color);
+} 
+
 /* ---------------
     7. Contact 
    --------------- */
