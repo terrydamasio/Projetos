@@ -17,9 +17,10 @@
     //abrindo o arquivo com fopen('nome do arquivo', 'parametros de ação')
     $arquivo = fopen('arquivo.hd', 'a');
 
+    //escrevendo no arquivo passando os parametros do arquivo aberto e o texto a ser escrito 
     fwrite($arquivo, $texto);
 
-    //fechando o arquivo
+    //fechando o arquivo passando a referencia do arquivo que foi aberto
     fclose($arquivo);
     
     //echo $texto;

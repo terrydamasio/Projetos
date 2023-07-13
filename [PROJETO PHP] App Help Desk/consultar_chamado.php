@@ -1,6 +1,12 @@
 <?php 
   require_once "validador_acesso.php";
 ?>
+<?php 
+  //Abrir o arquivo.hd
+  $arquivo = fopen('arquivo.hd', 'r');
+
+
+?> 
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
