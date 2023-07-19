@@ -1,2 +1,0 @@
-INÍCIO | MINHA REDE | VAGAS | CONTATO
-<hr>
