@@ -1,3 +1,3 @@
 <?php
-    require "../../../app_help_desk/valida_login.php"
+    require "../seguranca_projetos/app_help_desk/valida_login.php"
 ?>

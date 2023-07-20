@@ -13,7 +13,7 @@
     $texto = '' . $_SESSION['id'] . '# ' . $titulo . ' # ' . $categoria . ' # ' . $descricao . PHP_EOL; 
 
     //abrindo o arquivo com fopen('nome do arquivo', 'parametros de ação')
-    $arquivo = fopen('../../../app_help_desk/arquivo.hd', 'a');
+    $arquivo = fopen('../seguranca_projetos/app_help_desk/arquivo.hd', 'a');
 
     //escrevendo no arquivo passando os parametros do arquivo aberto e o texto a ser escrito 
     fwrite($arquivo, $texto);

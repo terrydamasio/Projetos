@@ -1,0 +1,5 @@
+/ Colocar em prática parte dos conhecimentos adquirido no curso de PHP OO, usando recursos como namespaces e tratamento de erros com try 'catch'. O app tem como objetivo enviar emails com o protocolo smtp através 'do' serviço de smtp em conjunto com o servidor smtp 'do' gmail. Também incorporei a biblioteca php mailer para auxiliar no desenvolvimento da aplicação, ganhando mais produtividade. Além disso, trabalhei na segurança de arquivos sigilosos no backend da aplicação. Após clicar no submit os dados 'do' front são enviados para o backend da aplicação através de um request ultilizando um protocolo http. 
+
+Trabalhando na segurança do diretório público do servidor http que está disponível para a internet, assim evitando a exposição de arquivos sigilosos, como por exemplo, senha e email de usuários, dando uma camada de segurança para a aplicação backend, assim evitando problemas na nossa aplicação.
+
+*/
