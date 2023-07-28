@@ -1,0 +1,2 @@
+Aplicação que permite a realização dos processos de CRUD no banco de dados. Essa aplicação permite consultar as tarefas pendentes, registrar novas tarefas e consultar todas as tarefas. Também vamos ter alguns controles, como os de editar a tarefa, remover e marca-las como "feito".
+Também vamos tratar as nossas querys para evitar o sql injection
