@@ -18,14 +18,14 @@
 		
 		<div class="col-md-3">
 
-			<div class="perfil" style="border-radius: 10px;">
+			<div class="perfil">
 				<div class="perfilTopo">
 
 				</div>
 
 				<div class="perfilPainel">
 					
-					<div class="row mt-2 mb-2">
+				<div class="row mt-2 mb-2">
 						<div class="col mb-2">
 							<span class="perfilPainelNome"><?=$this->view->info_usuario['nome']?></span>
 						</div>
@@ -56,51 +56,52 @@
 		</div>
 
 		<div class="col-md-6">
+			
 			<div class="row mb-2">
-				<div class="col tweetBox" style="border-radius: 10px;">
-					<form method="post" action="/tweet">
-						<textarea class="form-control" id="exampleFormControlTextarea1" name="tweet" rows="3"  placeholder="O que está acontecendo?"></textarea>
-						
-						<div class="col mt-2 d-flex justify-content-end">
-							<button type="submit" class="btn btn-primary">Tweet</button>
+				<div class="col">
+					<div class="card">
+						<div class="card-body">
+							<form method="get" action="/quem_seguir">
+								<div class="input-group mb-3">
+									<input type="text" class="form-control" placeholder="Quem você está procurando?" name="pesquisarPor">
+									<div class="input-group-append">
+										<button class="btn btn-primary" type="submit">Procurar</button>
+									</div>
+								</div>
+							</form>
 						</div>
-
-					</form>
+					</div>
 				</div>
 			</div>
 
-
-			<?php foreach($this->view->tweets as $id_tweet => $tweet) { ?>
-				<div class="row tweet" style="border-radius: 10px;">
+			<?php foreach($this->view->usuarios as $indice_arr => $usuario) { ?>
+				<div class="row mb-2">
 					<div class="col">
-						<p><strong><?= $tweet['nome'] ?></strong> <small><span class="text text-muted">- <?= $tweet['data'] ?></span> </small></p>
-						<p><?= $tweet['tweet'] ?></p>
-
-						<br />
-						<?php if($tweet['id_usuario'] == $_SESSION['id']) { ?>
-							<form>
-								<div class="col d-flex justify-content-end">
-									<button type="submit" class="btn btn-danger"><small>Remover</small></button>
+						<div class="card">
+							<div class="card-body">
+								<div class="row">
+									<div class="col-md-6">
+										<?= $usuario['nome'] ?>
+									</div>
+								
+									<div class="col-md-6 d-flex justify-content-end">
+										<div>
+											<?php if($usuario['seguindo_sn'] == 0) { ?>
+												<a href="/acao?acao=seguir&id_usuario=<?=$usuario['id']?>" class="btn btn-success">Seguir</a>
+											<?php } ?>
+											
+											<?php if($usuario['seguindo_sn'] == 1) { ?>
+												<a href="/acao?acao=deixar_de_seguir&id_usuario=<?=$usuario['id']?>" class="btn btn-danger">Deixar de seguir</a>
+											<?php } ?>
+										</div>
+									</div>
 								</div>
-							</form>
-						<?php } ?>
+							</div>
+						</div>
 					</div>
 				</div>
 			<?php } ?>
 
-			
-
-
 		</div>
-
-
-		<div class="col-md-3">
-			<div class="quemSeguir" style="border-radius: 10px;">
-				<span class="quemSeguirTitulo">Quem seguir</span><br />
-				<hr />
-				<a href="/quem_seguir" class="quemSeguirTxt">Procurar por pessoas conhecidas</a>
-			</div>
-		</div>
-
 	</div>
 </div>
