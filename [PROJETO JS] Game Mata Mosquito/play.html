@@ -30,14 +30,15 @@
 
     <script>
 
-    document.getElementById('cronometro').innerHTML = tempo
-
-        posicaoRandomica()
-
-        //criando e removendo moscas a cada ciclo de tempo 
-        var criaMosca = setInterval(function() {
+        document.getElementById('cronometro').innerHTML = tempo
+           
             posicaoRandomica()
-        }, criaMosquitoTempo)
+
+            //criando e removendo moscas a cada ciclo de tempo 
+            var criaMosca = setInterval(function() {
+                posicaoRandomica()
+
+            }, criaMosquitoTempo)
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
