@@ -62,9 +62,6 @@ class Route extends Bootstrap {
 			'action' => 'acao'
 		);
 
-
-
-
 		$this->setRoutes($routes);
 	}
 
