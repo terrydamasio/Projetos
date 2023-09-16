@@ -1,4 +1,7 @@
 <?php
+
+    require "../seguranca_projetos/app_lista_tarefas/conexao.php";
+
     class TarefaService {
         
         private $conexao;
